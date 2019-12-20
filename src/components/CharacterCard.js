@@ -1,4 +1,4 @@
-import {Card, CardBody, CardSubtitle} from 'react-strap'
+import {Card, CardBody, CardSubtitle} from 'reactstrap'
 
 import React from "react";
 

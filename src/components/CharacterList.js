@@ -22,9 +22,7 @@ export default function CharacterList() {
 
   return (
     <section className="character-list">
-      <h2>TODO: `array.map()` over your state here!
-      <CharacterCard/>
-      </h2>
+      <h2>TODO: `array.map()` over your state here!<CharacterCard/></h2>
     </section>
   );
 }
