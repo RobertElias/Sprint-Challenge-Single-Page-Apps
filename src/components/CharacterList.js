@@ -40,8 +40,10 @@ const handleChange = e => {
     ></input>
     </form>
     </div>
-      <h2>
-      <CharacterCard/>
+      <h2>{data.map(results => (
+        <CharacterCard key={results.id} data={results} />
+      ))}
+      
       </h2>
     </section>
   );
