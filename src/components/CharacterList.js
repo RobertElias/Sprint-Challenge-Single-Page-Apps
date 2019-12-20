@@ -22,6 +22,15 @@ export default function CharacterList() {
 
   return (
     <section className="character-list">
+    <div className="character-list">
+    <form>
+    <label htmlFor="name">Character: </label>
+    <input 
+    type="text"
+    placeholder="search by name"  
+    ></input>
+    </form>
+    </div>
       <h2>TODO: `array.map()` over your state here!<CharacterCard/></h2>
     </section>
   );

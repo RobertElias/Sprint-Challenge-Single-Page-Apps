@@ -11,7 +11,7 @@ export default function App() {
       <Header />
       <div className="nav-links">
       <Link className="some-link" to="/">Home</Link><br></br>
-          <Link className="some-link" to="/CharacterList">CharacterList of Rick and Morty</Link>
+      <Link className="some-link" to="/CharacterList">CharacterList of Rick and Morty</Link>
       </div>
       <Route exact path="/" component={WelcomePage}/>
       <Route exact path="/CharacterList" component={CharacterList} />
