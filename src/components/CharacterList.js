@@ -27,24 +27,27 @@ const handleChange = e => {
   setSearchResults(e.target.value);
 };
 
+
+
   return (
     <section className="character-list">
     <div className="character-list">
     <form>
-    <label htmlFor="name">Character: </label>
-    <input 
+    <label htmlFor="name">Search: </label>
+    <input
     type="text"
-    placeholder="search by name"
     onChange={handleChange}
-    value={searchResults}  
-    ></input>
-    </form>
-    </div>
-      <h2>{data.map(results => (
-        <CharacterCard key={results.id} data={results} />
-      ))}
-      
-      </h2>
-    </section>
-  );
+    value={searchResults}
+    placeholder="search by name"
+    autoComplete="off"
+    />
+      </form>
+ </div>
+
+  <h2>{data.map(results => (
+    <CharacterCard key={results.id} data={results} />
+  ))}
+  </h2>
+  </section>
+);
 }
