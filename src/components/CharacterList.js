@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 
+import CharacterCard from './CharacterCard';
 import axios from "axios";
 
 export default function CharacterList() {
@@ -21,7 +22,9 @@ export default function CharacterList() {
 
   return (
     <section className="character-list">
-      <h2>TODO: `array.map()` over your state here!</h2>
+      <h2>TODO: `array.map()` over your state here!
+      <CharacterCard/>
+      </h2>
     </section>
   );
 }
