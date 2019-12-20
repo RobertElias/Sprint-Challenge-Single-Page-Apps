@@ -23,6 +23,10 @@ export default function CharacterList() {
     });
 }, [searchResults]); 
 
+const handleChange = e => {
+  setSearchResults(e.target.value);
+};
+
   return (
     <section className="character-list">
     <div className="character-list">
@@ -30,11 +34,15 @@ export default function CharacterList() {
     <label htmlFor="name">Character: </label>
     <input 
     type="text"
-    placeholder="search by name"  
+    placeholder="search by name"
+    onChange={handleChange}
+    value={searchResults}  
     ></input>
     </form>
     </div>
-      <h2>TODO: `array.map()` over your state here!<CharacterCard/></h2>
+      <h2>
+      <CharacterCard/>
+      </h2>
     </section>
   );
 }
