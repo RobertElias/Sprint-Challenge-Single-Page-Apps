@@ -6,19 +6,22 @@ import axios from "axios";
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
   const [data, setData] = useState([]);
-
+  const [searchResults, setSearchResults] = useState("");
   useEffect(() => {
-    // TODO: Add API Request here - must run in `useEffect`
-    //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
-    axios.get('https://rick-api.herokuapp.com/api/')
+
+    axios.get('https://rickandmortyapi.com/api/character/')
     .then(response => {
-      setData(response.data.results);
+      const output = response.data.results.filter(person =>
+        person.name.toLowerCase().includes(searchResults.toLowerCase())
+      );
       console.log(response.data.results);
+      setData(output);
+
     })
-    .catch(error =>{
-      console.log("Error Processing Data", error);
-    })
-  }, [setData]);
+    .catch(error => {
+      console.error('Server Error', error);
+    });
+}, [searchResults]); 
 
   return (
     <section className="character-list">
